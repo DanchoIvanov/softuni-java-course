@@ -5,12 +5,9 @@ public class WordCruncher {
     public static List<String> words;
     public static List<String> combined = new ArrayList<>();
     public static String target;
-
     public static Set<String> out = new TreeSet<>();
-
     public static Map<Integer, List<String>> table = new HashMap<>();
     public static Map<String, Integer> occurrences = new HashMap<>();
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -36,7 +33,6 @@ public class WordCruncher {
             System.out.println(str);
         }
     }
-
     private static void permute(int index) {
         if (index == target.length()) {
             print();
@@ -56,7 +52,6 @@ public class WordCruncher {
             }
         }
     }
-
     private static void print() {
         String actual = String.join("", combined);
         if (actual.contains(target)) {
